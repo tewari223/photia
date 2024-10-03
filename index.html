@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Photo Album</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-2">
+        <h1 class="text-center">Create Your Photo Album</h1>
+        <div id="create-folder-section" class="create-folder my-4 text-center">
+            <input type="text" id="folderName" class="form-control d-inline-block w-50" placeholder="Enter folder name">
+            <button class="btn btn-primary ml-2" onclick="createFolder()">Create  Folder</button>
+        </div>
+        <div id="existing-folders" class="mb-4">
+        
+            <div id="album-section" class="album row justify-content-center">
+                <!-- Folders will be appended here -->
+            </div>
+        </div>
+        <div id="photos-section" class="d-none">
+            <button class="btn btn-secondary mb-3" onclick="goBack()">Back</button>
+            <button class="btn btn-success mb-3"  onclick="document.getElementById('fileInput').click()">add Image</button>
+            <input type="file" id="fileInput" class="d-none" onchange="uploadImage()">
+            <div id="photo-gallery" class="row">
+                <!-- Photos will be displayed here -->
+            </div>
+        </div>
+        <div id="full-screen-image" class="d-none">
+            <span class="close-btn" onclick="closeFullScreenImage()">&times;</span>
+            <img id="full-image" src="" alt="Full Screen Image">
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
